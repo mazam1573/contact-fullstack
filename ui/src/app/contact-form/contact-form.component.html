@@ -1,0 +1,23 @@
+<form [formGroup]="contactForm" class="row" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Full Name</label>
+        <input type="text" class="form-control" formControlName="fullName" id="exampleInputEmail1"
+            aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Email</label>
+        <input type="email" class="form-control" formControlName="email" id="exampleInputPassword1">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Phone No.</label>
+        <input type="text" class="form-control" formControlName="phone" id="exampleInputPassword1">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Address</label>
+        <input type="text" class="form-control" formControlName="address" id="exampleInputPassword1">
+    </div>
+    <div class="row" style="gap: 10px !important;">
+        <button type="button" class="btn btn-primary col-md-3" routerLink="/contact-list">Back to Contacts List</button>
+        <button class="btn btn-primary col-md-3" type="submit" [disabled]="!contactForm.valid">Submit</button>
+    </div>
+</form>
